@@ -23,7 +23,7 @@ const Issue = () => {
           })),
         );
       });
-  }, []);
+  }, [currentPage, owner, repo]);
 
   return (
     <Fragment>
