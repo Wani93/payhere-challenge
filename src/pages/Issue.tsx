@@ -23,7 +23,7 @@ const Issue = () => {
           })),
         );
       });
-  }, [currentPage]);
+  }, []);
 
   return (
     <Fragment>
