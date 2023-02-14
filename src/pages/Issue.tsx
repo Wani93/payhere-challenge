@@ -1,12 +1,15 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import List from '../components/List';
 import searchService from '../services/search';
 
 const Issue = () => {
   const { owner, repo } = useParams();
   const [currentPage] = useState(1);
   const [issues, setIssues] = useState<any[]>([]);
-
+  const hanldeClick = (html_url: string) => {
+    window.open(html_url);
+  };
   useEffect(() => {
     searchService
       .getIssues({
@@ -27,11 +30,18 @@ const Issue = () => {
 
   return (
     <Fragment>
-      {issues.map(({ id, title, html_url }) => (
-        <li key={id}>
-          <a href={html_url}>{title}</a>
-        </li>
-      ))}
+      <h1 className="text-3xl mt-2 ml-2">
+        {owner}/{repo}'s issues
+      </h1>
+      <div className="flex flex-col items-center mt-16">
+        {issues.map(({ id, title, html_url }) => (
+          <List type="primary" key={id}>
+            <p className="cursor-pointer" onClick={() => hanldeClick(html_url)}>
+              {title}
+            </p>
+          </List>
+        ))}
+      </div>
     </Fragment>
   );
 };

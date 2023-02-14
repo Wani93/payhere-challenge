@@ -1,4 +1,5 @@
 import React from 'react';
+import List from './List';
 
 interface Item {
   id: number;
@@ -12,15 +13,11 @@ interface Props {
 
 const DropDown = ({ items, onClick }: Props) => {
   return (
-    <div className="w-1/3 mt-1">
+    <div className="flex-col w-screen mt-1 absolute top-20 left-1/3">
       {items.map(({ id, name }) => (
-        <li
-          className="p-3 text-base list-none border-2 border-gray-300 rounded-lg hover:bg-sky-500 cursor-pointer"
-          key={id}
-          onClick={() => onClick({ id, name })}
-        >
+        <List key={id} type="primary" onClick={() => onClick({ id, name })}>
           {name}
-        </li>
+        </List>
       ))}
     </div>
   );
