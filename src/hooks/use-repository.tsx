@@ -1,8 +1,6 @@
-import { AxiosError } from 'axios';
 import { useEffect, useState } from 'react';
 import { Props } from '../components/Dropdown';
 import searchService from '../services/search';
-import { ResGetRepositories } from '../services/search/types';
 
 const useRepository = (search: string) => {
   const [loading, setLoading] = useState(false);

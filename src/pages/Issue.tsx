@@ -4,7 +4,7 @@ import searchService from '../services/search';
 
 const Issue = () => {
   const { owner, repo } = useParams();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage] = useState(1);
   const [issues, setIssues] = useState<any[]>([]);
 
   useEffect(() => {
