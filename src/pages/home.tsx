@@ -1,8 +1,8 @@
 import { Fragment, useState } from 'react';
-import RepositoryList from '../components/RepositoryList';
-import RepositorySelect from '../components/RepositorySelect';
-import type { Item, Props } from '../components/Dropdown';
+import RepositoryList from '../components/containers/RepositoryList';
+import RepositorySelect from '../components/containers/RepositorySelect';
 import { useNavigate } from 'react-router-dom';
+import type { Item, Props } from '../components/presenters/Dropdown';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -26,8 +26,6 @@ const Home = () => {
   };
 
   const handleClickRepo = (name: string) => {
-    // 페이지 이동
-    // 이동한 페이지에서 page 1로 이슈 조회
     const [owner, repo] = name.split('/');
     navigate(`/issues/${owner}/${repo}`);
   };

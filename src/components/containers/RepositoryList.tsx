@@ -1,6 +1,6 @@
 import React from 'react';
-import { Props } from './Dropdown';
-import List from './List';
+import List from '../presenters/List';
+import type { Props } from '../presenters/Dropdown';
 
 const RepositoryList = ({
   repositories,

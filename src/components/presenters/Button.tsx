@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import type { ReactNode } from 'react';
 
 const Button = ({
   children,
@@ -8,7 +9,7 @@ const Button = ({
   onClick: () => void;
 }) => {
   return (
-    <button onClick={onClick} className="p-1 bottom-1 border-gray-300 ">
+    <button onClick={onClick} className="mr-1 py-1 px-3 rounded bg-slate-200">
       {children}
     </button>
   );

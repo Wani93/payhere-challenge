@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Props } from '../components/Dropdown';
 import searchService from '../services/search';
+import type { Props } from '../components/presenters/Dropdown';
 
 const useRepository = (search: string) => {
   const [loading, setLoading] = useState(false);

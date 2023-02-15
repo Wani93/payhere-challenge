@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useState } from 'react';
-import useDeboundcing from '../hooks/use-debouncing';
-import DropDown from './Dropdown';
-import type { Item } from './Dropdown';
-import useRepository from '../hooks/use-repository';
-import List from './List';
+import useDeboundcing from '../../hooks/use-debouncing';
+import DropDown from '../presenters/Dropdown';
+import useRepository from '../../hooks/use-repository';
+import List from '../presenters/List';
+import type { Item } from '../presenters/Dropdown';
 
 const RepositorySelect = ({
   onClick,
