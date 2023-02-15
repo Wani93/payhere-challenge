@@ -38,7 +38,7 @@
 2. 등록한 Public Repository의 이슈 사항을 확인할 수 있어요.
    <img src='./docs/feature2.gif'>
 
-3. 이슈 목록은 페이지 단위로 볼 수 있어요.
+3. 선택한 Repository의 이슈를 페이지 단위로 볼 수 있어요.
    <img src='./docs/feature3.gif'>
 
 ---
